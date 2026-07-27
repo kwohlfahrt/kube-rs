@@ -190,7 +190,6 @@ impl<St, K, P> Stream for PredicateFilter<St, K, P>
 where
     St: Stream<Item = Result<K, Error>>,
     K: Resource,
-    K::DynamicType: Eq + Hash,
     P: Predicate<K>,
 {
     type Item = Result<K, Error>;
